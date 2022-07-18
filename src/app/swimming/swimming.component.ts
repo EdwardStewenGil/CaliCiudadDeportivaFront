@@ -4,21 +4,21 @@ import { UserServiceService } from '../services/user-service.service'
 import { empty, Observable } from "rxjs";
 import Swal from 'sweetalert2'
 
-@Component({
-  selector: 'app-event',
-  templateUrl: './event.component.html',
-  styleUrls: ['./event.component.css']
-})
-export class EventComponent implements OnInit {
-  usuarioDto: UsuarioDto[] = [];
-  nuevoUsuario: UsuarioDto = { nombre: '', identificacion: '', celular: '', correo: '', comuna: '', genero: '',evento:"trail" };
-  terminos="false"
 
+@Component({
+  selector: 'app-swimming',
+  templateUrl: './swimming.component.html',
+  styleUrls: ['./swimming.component.css']
+})
+export class SwimmingComponent implements OnInit {
+  usuarioDto: UsuarioDto[] = [];
+  nuevoUsuario: UsuarioDto = { nombre: '', identificacion: '', celular: '', correo: '', comuna: '', genero: '', evento: "swimming" };
+
+  terminos = "false"
   constructor(
     private userServiceService: UserServiceService) { }
 
   ngOnInit(): void { }
-
 
 
   public crearUsuario() {
@@ -33,7 +33,7 @@ export class EventComponent implements OnInit {
 
       Swal.fire('El celular es de 10 digitos')
 
-    }else if (this.nuevoUsuario.correo == "") {
+    } else if (this.nuevoUsuario.correo == "") {
 
       Swal.fire('correo no diligenciado')
 
@@ -45,7 +45,7 @@ export class EventComponent implements OnInit {
 
       Swal.fire('debes aceptar termino y condiciones')
 
-    }else {
+    } else {
       this.userServiceService.createUser(this.nuevoUsuario).subscribe(
         (data: any) => {
           if (data.status == 200) {
@@ -62,6 +62,7 @@ export class EventComponent implements OnInit {
 
 
     }
+
 
 
 

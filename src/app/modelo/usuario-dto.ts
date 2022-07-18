@@ -7,4 +7,6 @@ export interface UsuarioDto {
          correo?:string;
          comuna?:string;
          genero?:string;
+         evento?:string;
+
 }

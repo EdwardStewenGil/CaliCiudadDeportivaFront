@@ -35,7 +35,7 @@
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                    <img src="../../assets/Recurso 5.png"  width="50%" > 
+                    <img src="../../assets/Recurso 5.png" width="50%">
                 </a>
 
                 <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
@@ -47,7 +47,7 @@
                             Inicio
                         </a>
                     </li>
-     
+
                     <li>
                         <a href="/evento" class="nav-link text-secondary">
                             <svg class="bi d-block mx-auto mb-1" width="24" height="24">
@@ -72,36 +72,36 @@
 
 </header>
 
-<body class="d-flex h-100 text-center text-white fondo"  >
+<body class="d-flex h-100 text-center text-white fondo">
 
 
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column " >  
-        
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
+
         <main class="px-3">
-            <br/>
-            <img src="../../assets/Recurso 16.png"  width="50%" >
-            <br/>
-            <br/>
-    
-            <img src="../../assets/b.png"  width="45%" >
-            <br/>
-            <br/>
-    
-            <img src="../../assets/Recurso 14.png"  width="90%" >
-    
+            <br />
+            <img src="../../assets/Recurso 16.png" width="50%">
+            <br />
+            <br />
+
+            <img src="../../assets/b.png" width="45%">
+            <br />
+            <br />
+
+            <img src="../../assets/Recurso 14.png" width="90%">
 
 
 
 
 
-    
-    </main>
-    
-    <footer class="mt-auto text-white-50">
-        <p>Conectate con <a href="https://CaliCiudadDeportiva.com" class="text-white">#CaliCiudadDeportiva</a>
-    </footer>
-</div>
+
+
+        </main>
+
+        <footer class="mt-auto text-white-50">
+            <p>Conectate con <a href="https://CaliCiudadDeportiva.com" class="text-white">#CaliCiudadDeportiva</a>
+        </footer>
+    </div>
 
 
 
@@ -109,27 +109,53 @@
 </body>
 <div class="container col-xl-10 col-xxl-8 px-4 py-0">
     <div class="row align-items-center g-lg-5 py-5">
-      <div class="col-lg-7 text-center text-lg-start">
-        <h1 class="display-4 fw-bold lh-1 mb-3">NIGHTTRAIL</h1>
-        <h2>Sorteo de 150 Pases para la carrera</h2>
-        <p class="col-lg-10 fs-4">Una carrera de Trail Nocturna que contará con dos distancias, 7k y 15k. Un evento donde se podrá disfrutar de una gran ruta por nuestras montañas y disfrutar de la magia que trae una noche caleña, para que al final, vivamos una fiesta del Trail Running Nocturno en nuestra ciudad. Recuerda que al registrarse tu celular es el medio de comunicacion para participar </p>
-        <a href="https://www.correpasion.com/nighttrail/" class="btn btn-lg btn-secondary fw-bold border-white bg-ama">Mas Informacion de la carrera</a>
-        <br/>
+        <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 mb-3">NIGHTTRAIL</h1>
+            <h2>Sorteo de 150 Pases para la carrera</h2>
+            <p class="col-lg-10 fs-4">Una carrera de Trail Nocturna que contará con dos distancias, 7k y 15k. Un evento
+                donde se podrá disfrutar de una gran ruta por nuestras montañas y disfrutar de la magia que trae una
+                noche caleña, para que al final, vivamos una fiesta del Trail Running Nocturno en nuestra ciudad.
+                Recuerda que al registrarse tu celular es el medio de comunicacion para participar </p>
+            <a href="https://www.correpasion.com/nighttrail/"
+                class="btn btn-lg btn-secondary fw-bold border-white bg-ama">Mas Informacion de la carrera</a>
+            <br />
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form  class="p-4 p-md-5 border rounded-3 bg-light" action="" >
+                <div class="form-floating mb-3">
+                    <input class="form-control" [(ngModel)]="nuevoUsuario.nombre" id="nombre" placeholder="nombre" name="nombre">
+                    <label for="floatingInput">Nombre completo</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" [(ngModel)]="nuevoUsuario.celular" id="celular" placeholder="celular"  name="celular">
+                    <label for="floatingInput">Celular</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" [(ngModel)]="nuevoUsuario.correo" id="correo" placeholder="correo" name="correo">
+                    <label for="floatingInput">Correo</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" [(ngModel)]="nuevoUsuario.comuna" id="comuna" placeholder="comuna" name="comuna">
+                    <label for="floatingInput">Comuna</label>
+                </div>
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox"  value="terminos"> Aceptas terminos y condiciones
+                    </label>
+                </div>
+                <button class="w-100 btn btn-lg bg-ama" (click)= "crearUsuario()" >Registrarse</button>
+                <hr class="my-4">
+                <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+            </form>
+        </div>
     </div>
-      <div class="col-md-10 mx-auto col-lg-5">
-        <form class="p-4 p-md-5 border rounded-3 bg-light" action="" >
-            <h2>El Sorteo de 150 boletas NIGHTTRAIL ya fue realizado: por whatsapp nos estaremos comunicando con los ganadores sigan con #CaliCiudadDeportiva</h2>
+</div>
 
 
 
-          <hr class="my-4">
-          <small class="text-muted">por cali ciudad deportiva estaremos realizando nuevos eventos</small>
-        </form>
-      </div>
-    </div>
-  </div>
 
-  <section class="">
+<section class="">
     <!-- Footer -->
     <footer class="text-center text-white" style="background-color: #0a4275;">
         <!-- Grid container -->

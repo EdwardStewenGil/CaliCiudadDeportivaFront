@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { DataTablesModule } from "angular-datatables";
+import { EventosComponent } from './eventos/eventos.component';
+import { SwimmingComponent } from './swimming/swimming.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { DataTablesModule } from "angular-datatables";
     EventComponent,
     LoginComponent,
     AdminComponent,
+    EventosComponent,
+    SwimmingComponent,
 
   ],
   imports: [
