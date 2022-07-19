@@ -6,13 +6,13 @@ import Swal from 'sweetalert2'
 
 
 @Component({
-  selector: 'app-swimming',
-  templateUrl: './swimming.component.html',
-  styleUrls: ['./swimming.component.css']
+  selector: 'app-carrera',
+  templateUrl: './carrera.component.html',
+  styleUrls: ['./carrera.component.css']
 })
-export class SwimmingComponent implements OnInit {
+export class CarreraComponent implements OnInit {
   usuarioDto: UsuarioDto[] = [];
-  nuevoUsuario: UsuarioDto = { nombre: '', identificacion: '', direccion: '', comuna: '', celular: '', fecha_na:''  , genero: '', institucion: '', evento: "swimming" };
+  nuevoUsuario: UsuarioDto = { nombre: '', identificacion: '', celular: '', correo: '', comuna: '', genero: '', evento: "swimming" };
 
   terminos = ""
   constructor(

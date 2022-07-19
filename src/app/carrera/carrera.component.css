@@ -1,0 +1,7 @@
+.fondo{
+
+    background-image: url('../../assets/BgCarrera_2.png');    
+    background-attachment: fixed;
+    background-position: center;    
+    image-rendering:auto
+  }

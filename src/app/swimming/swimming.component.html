@@ -112,7 +112,9 @@
 
 
 
+
 </body>
+
 <div class="container col-xl-10 col-xxl-8 px-4 py-0">
     <div class="row align-items-center g-lg-5 py-5">
         <div class="col-lg-7 text-center text-lg-start">
@@ -150,10 +152,11 @@
                         name="comuna">
                     <label for="floatingInput">Comuna</label>
                 </div>
-
+                <a href="http://localhost:4200/terminos" target="_blank">Termino y condiciones</a>
                 <div class="checkbox mb-3">
                     <label>
-                        <input type="checkbox" value="terminos" name="terminos" id="terminos"> Aceptas terminos y
+                        <input type="checkbox" [(ngModel)]="terminos" value="terminos" name="terminos" id="terminos">
+                        Aceptas terminos y
                         condiciones
                     </label>
                 </div>
@@ -166,6 +169,9 @@
 </div>
 
 <div class="b-example-divider"></div>
+
+
+
 
 <div class="container my-5">
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
@@ -202,15 +208,13 @@
                     </div>
                     <br />
                     <ul class="list-group list-group-flush">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#juevesma">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#juevesma">
                             Mañana
                         </button>
                         <br />
 
 
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#juevesta">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#juevesta">
                             Tarde
                         </button>
                     </ul>
@@ -242,15 +246,13 @@
                     </div>
                     <br />
                     <ul class="list-group list-group-flush">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#sabadoma">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sabadoma">
                             Mañana
                         </button>
                         <br />
 
 
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#sabadota">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sabadota">
                             Tarde
                         </button>
                     </ul>
@@ -266,7 +268,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title text-danger" id="miercolesma">miercoles 19 mañana</h5>
+                                <h5 class="modal-title text-danger" id="miercolesma">miercoles 20 mañana</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -276,12 +278,12 @@
                                     <li class="list-group-item">7:45 - 8:30 grupo A ------ 8:30 - 9:15 grupo B </li>
                                     <li class="list-group-item active" aria-current="true">9:30 inicio de competicion
                                         Sesion 1:</li>
-                                    <li class="list-group-item">100 SF mujeres (heats) </li>
-                                    <li class="list-group-item">100 SF hombres (heats)</li>
+                                    <li class="list-group-item">100 SF Mujeres (heats) </li>
+                                    <li class="list-group-item">100 SF Hombres (heats)</li>
                                     <li class="list-group-item">100 BF Mujeres (heats) </li>
                                     <li class="list-group-item">100 BF Hombres (heats)</li>
-                                    <li class="list-group-item">400 SF mujeres (heats) </li>
-                                    <li class="list-group-item">400 SF hombres (heats)</li>
+                                    <li class="list-group-item">400 SF Mujeres (heats) </li>
+                                    <li class="list-group-item">400 SF Hombres (heats)</li>
                                     <li class="list-group-item">4x50 SF Relevo mixto (heats) </li>
                                 </ul>
                             </div>
@@ -299,7 +301,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title text-danger" id="miercolesta">Miercoles 19 tarde</h5>
+                                <h5 class="modal-title text-danger" id="miercolesta">Miercoles 20 tarde</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -309,7 +311,7 @@
                                     <li class="list-group-item">3:15 - 4:45 </li>
                                     <li class="list-group-item active" aria-current="true">Inicio de Competencia 5:00
                                         Sesion 2</li>
-                                    <li class="list-group-item">100 SF hombres Final (heats) ----- 100 BF Mujeres Final
+                                    <li class="list-group-item">100 SF Hombres Final (heats) ----- 100 BF Mujeres Final
                                         (heats)</li>
                                     <li class="list-group-item">1ra Ceremonia Premios 100 SF Mujeres</li>
                                     <li class="list-group-item">100 BF Mujeres Final (heats)</li>
@@ -335,14 +337,13 @@
                     </div>
                 </div>
 
-                
+
                 <!-- Modal -->
-                <div class="modal fade" id="juevesma" tabindex="-1" aria- labelledby="juevesma"
-                    aria-hidden="true">
+                <div class="modal fade" id="juevesma" tabindex="-1" aria- labelledby="juevesma" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title text-danger" id="juevesma">Jueves 20 mañana</h5>
+                                <h5 class="modal-title text-danger" id="juevesma">Jueves 21 mañana</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -352,15 +353,15 @@
                                     <li class="list-group-item">7:45 - 8:30 grupo A ------ 8:30 - 9:15 grupo B </li>
                                     <li class="list-group-item active" aria-current="true">9:30 inicio de competicion
                                         Sesion 3:</li>
-                                    <li class="list-group-item">100 M mujeres (heats) </li>
-                                    <li class="list-group-item">100 M hombres (heats)</li>
+                                    <li class="list-group-item">100 IM Mujeres (heats) </li>
+                                    <li class="list-group-item">100 IM Hombres (heats)</li>
                                     <li class="list-group-item">200 SF Mujeres (heats) </li>
                                     <li class="list-group-item">200 SF Hombres (heats)</li>
-                                    <li class="list-group-item">200 BF mujeres (heats) </li>
-                                    <li class="list-group-item">200 BF hombres (heats)</li>
+                                    <li class="list-group-item">200 BF Mujeres (heats) </li>
+                                    <li class="list-group-item">200 BF Hombres (heats)</li>
                                     <li class="list-group-item">1500 SF Mujeres (slow heats) </li>
                                     <li class="list-group-item">1500 SF Hombres (slow heats)</li>
-                                    <li class="list-group-item">1500 SF Hombres (slow heats)</li>
+                                    <li class="list-group-item">4 x 100 BF Relevo mixto(heats)</li>
 
 
                                     <li class="list-group-item">4x50 SF Relevo mixto (heats) </li>
@@ -375,12 +376,11 @@
                 </div>
 
                 <!-- Modal -->
-                <div class="modal fade" id="miercolesta" tabindex="-1" aria- labelledby="miercolesta"
-                    aria-hidden="true">
+                <div class="modal fade" id="juevesta" tabindex="-1" aria- labelledby="juevesta" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title text-danger" id="miercolesta">Miercoles 19 tarde</h5>
+                                <h5 class="modal-title text-danger" id="juevesta">Jueves 21 tarde</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -389,21 +389,25 @@
                                     <li class="list-group-item active" aria-current="true">Calentamiento</li>
                                     <li class="list-group-item">3:15 - 4:45 </li>
                                     <li class="list-group-item active" aria-current="true">Inicio de Competencia 5:00
-                                        Sesion 2</li>
-                                    <li class="list-group-item">100 SF hombres Final (heats) ----- 100 BF Mujeres Final
+                                        Sesion 4</li>
+                                    <li class="list-group-item">100 IM Hombres Final (heats) ----- 100 IM Mujeres Final
                                         (heats)</li>
-                                    <li class="list-group-item">1ra Ceremonia Premios 100 SF Mujeres</li>
-                                    <li class="list-group-item">100 BF Mujeres Final (heats)</li>
-                                    <li class="list-group-item">2da Ceremonia Premios 100 SF Hombres</li>
-                                    <li class="list-group-item">100 BF Hombres Final (heats)</li>
-                                    <li class="list-group-item">3ra Ceremonia Premios 100 BF Mujeres</li>
-                                    <li class="list-group-item">400 BF Mujeres Final (heats)</li>
-                                    <li class="list-group-item">4ta Ceremonia Premios 100 BF Hombres</li>
-                                    <li class="list-group-item">400 SF Hombres Final (heats)</li>
-                                    <li class="list-group-item">5ta Ceremonia Premios 400 SF Mujeres</li>
-                                    <li class="list-group-item">4X50 SF Reñevo mixto Final (heats)</li>
-                                    <li class="list-group-item">6ta Ceremonia Premios 400 SF Hombres y 7ta Ceremonia
-                                        premios 4x50 SF Relevo mixto</li>
+                                    <li class="list-group-item">1ra Ceremonia Premios 100 IM Mujeres</li>
+                                    <li class="list-group-item">200 SF Mujeres Final (heats)</li>
+                                    <li class="list-group-item">2da Ceremonia Premios 100 IM Hombres</li>
+                                    <li class="list-group-item">200 SF Hombres Final (heats)</li>
+                                    <li class="list-group-item">3ra Ceremonia Premios 200 SF Mujeres</li>
+                                    <li class="list-group-item">200 BF Mujeres Final (heats)</li>
+                                    <li class="list-group-item">4ta Ceremonia Premios 200 SF Hombres</li>
+                                    <li class="list-group-item">200 BF Hombres Final (heats)</li>
+                                    <li class="list-group-item">5ta Ceremonia Premios 200 BF Mujeres</li>
+                                    <li class="list-group-item">1500 SF Mujeres (fast heats)</li>
+                                    <li class="list-group-item">6ta Ceremonia Premios 200 BF Hombres</li>
+                                    <li class="list-group-item">1500 SF Hombres (fast heats)</li>
+                                    <li class="list-group-item">7ta Ceremonia Premios 1500 SF Mujeres</li>
+                                    <li class="list-group-item">4X100 BF Relevo mixto (final)</li>
+                                    <li class="list-group-item">8ta Ceremonia Premios 1500 SF Hombres Y 9na Ceremonia
+                                        Premios 4X100 BF Relevo mixto</li>
 
 
                                 </ul>
@@ -418,14 +422,13 @@
 
 
 
-                
+
                 <!-- Modal -->
-                <div class="modal fade" id="miercolesma" tabindex="-1" aria- labelledby="miercolesma"
-                    aria-hidden="true">
+                <div class="modal fade" id="viernesma" tabindex="-1" aria- labelledby="viernesma" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title text-danger" id="miercolesma">miercoles 19 mañana</h5>
+                                <h5 class="modal-title text-danger" id="viernesma">Viernes 22 Mañana</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -434,14 +437,18 @@
                                     <li class="list-group-item active" aria-current="true">Calentamiento:</li>
                                     <li class="list-group-item">7:45 - 8:30 grupo A ------ 8:30 - 9:15 grupo B </li>
                                     <li class="list-group-item active" aria-current="true">9:30 inicio de competicion
-                                        Sesion 1:</li>
-                                    <li class="list-group-item">100 SF mujeres (heats) </li>
-                                    <li class="list-group-item">100 SF hombres (heats)</li>
-                                    <li class="list-group-item">100 BF Mujeres (heats) </li>
-                                    <li class="list-group-item">100 BF Hombres (heats)</li>
-                                    <li class="list-group-item">400 SF mujeres (heats) </li>
-                                    <li class="list-group-item">400 SF hombres (heats)</li>
-                                    <li class="list-group-item">4x50 SF Relevo mixto (heats) </li>
+                                        Sesion 5:</li>
+                                    <li class="list-group-item">50 SF Mujeres (heats) </li>
+                                    <li class="list-group-item">50 SF Hombres (heats)</li>
+                                    <li class="list-group-item">50 BF Mujeres (heats) </li>
+                                    <li class="list-group-item">50 BF Hombres (heats)</li>
+                                    <li class="list-group-item">400 IM Mujeres (slow heats) </li>
+                                    <li class="list-group-item">400 IM Hombres (slow heats)</li>
+                                    <li class="list-group-item">400 BF Mujeres (heats) </li>
+                                    <li class="list-group-item">400 BF Hombres (heats)</li>
+                                    <li class="list-group-item">4x200 SF Hombre (heats) </li>
+                                    <li class="list-group-item">4x200 SF Mujeres (heats) </li>
+
                                 </ul>
                             </div>
                             <div class="modal-footer">
@@ -453,12 +460,11 @@
                 </div>
 
                 <!-- Modal -->
-                <div class="modal fade" id="miercolesta" tabindex="-1" aria- labelledby="miercolesta"
-                    aria-hidden="true">
+                <div class="modal fade" id="viernesta" tabindex="-1" aria- labelledby="viernesta" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title text-danger" id="miercolesta">Miercoles 19 tarde</h5>
+                                <h5 class="modal-title text-danger" id="viernesta">Viernes 22 Tarde</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -468,20 +474,26 @@
                                     <li class="list-group-item">3:15 - 4:45 </li>
                                     <li class="list-group-item active" aria-current="true">Inicio de Competencia 5:00
                                         Sesion 2</li>
-                                    <li class="list-group-item">100 SF hombres Final (heats) ----- 100 BF Mujeres Final
+                                    <li class="list-group-item">50 SF Hombres Final (heats) ----- 50 BF Mujeres Final
                                         (heats)</li>
-                                    <li class="list-group-item">1ra Ceremonia Premios 100 SF Mujeres</li>
-                                    <li class="list-group-item">100 BF Mujeres Final (heats)</li>
-                                    <li class="list-group-item">2da Ceremonia Premios 100 SF Hombres</li>
-                                    <li class="list-group-item">100 BF Hombres Final (heats)</li>
-                                    <li class="list-group-item">3ra Ceremonia Premios 100 BF Mujeres</li>
+                                    <li class="list-group-item">1ra Ceremonia Premios 50 SF Mujeres</li>
+                                    <li class="list-group-item">50 BF Mujeres Final (heats)</li>
+                                    <li class="list-group-item">2da Ceremonia Premios 50 SF Hombres</li>
+                                    <li class="list-group-item">50 BF Hombres Final (heats)</li>
+                                    <li class="list-group-item">3ra Ceremonia Premios 50 BF Mujeres</li>
+                                    <li class="list-group-item">400 IM Mujeres Final (Fast heats)</li>
+                                    <li class="list-group-item">4ta Ceremonia Premios 50 BF Hombres</li>
+                                    <li class="list-group-item">400 im Hombres Final (Fast heats)</li>
+                                    <li class="list-group-item">5ta Ceremonia Premios 400 IM Mujeres</li>
                                     <li class="list-group-item">400 BF Mujeres Final (heats)</li>
-                                    <li class="list-group-item">4ta Ceremonia Premios 100 BF Hombres</li>
-                                    <li class="list-group-item">400 SF Hombres Final (heats)</li>
-                                    <li class="list-group-item">5ta Ceremonia Premios 400 SF Mujeres</li>
-                                    <li class="list-group-item">4X50 SF Reñevo mixto Final (heats)</li>
-                                    <li class="list-group-item">6ta Ceremonia Premios 400 SF Hombres y 7ta Ceremonia
-                                        premios 4x50 SF Relevo mixto</li>
+                                    <li class="list-group-item">6ta Ceremonia Premios 400 IM Hombres</li>
+                                    <li class="list-group-item">400 BF Hombres Final (heats)</li>
+                                    <li class="list-group-item">7ta Ceremonia Premios 400 BF Mujeres</li>
+                                    <li class="list-group-item">4x200 SF Mujeres Final (heats)</li>
+                                    <li class="list-group-item">8ta Ceremonia Premios 400 BF Hombres</li>
+                                    <li class="list-group-item">4x200 SF Hombres Final (heats)</li>
+                                    <li class="list-group-item">9na Ceremonia Premios 4x200 SF Mujeres Y 10ma Ceremonia
+                                        de premios 4x200 SF Hombres</li>
 
 
                                 </ul>
@@ -496,14 +508,13 @@
 
 
 
-                
+
                 <!-- Modal -->
-                <div class="modal fade" id="miercolesma" tabindex="-1" aria- labelledby="miercolesma"
-                    aria-hidden="true">
+                <div class="modal fade" id="sabadoma" tabindex="-1" aria- labelledby="sabadoma" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title text-danger" id="miercolesma">miercoles 19 mañana</h5>
+                                <h5 class="modal-title text-danger" id="sabadoma">Sabado 23 mañana</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -512,14 +523,13 @@
                                     <li class="list-group-item active" aria-current="true">Calentamiento:</li>
                                     <li class="list-group-item">7:45 - 8:30 grupo A ------ 8:30 - 9:15 grupo B </li>
                                     <li class="list-group-item active" aria-current="true">9:30 inicio de competicion
-                                        Sesion 1:</li>
-                                    <li class="list-group-item">100 SF mujeres (heats) </li>
-                                    <li class="list-group-item">100 SF hombres (heats)</li>
-                                    <li class="list-group-item">100 BF Mujeres (heats) </li>
-                                    <li class="list-group-item">100 BF Hombres (heats)</li>
-                                    <li class="list-group-item">400 SF mujeres (heats) </li>
-                                    <li class="list-group-item">400 SF hombres (heats)</li>
-                                    <li class="list-group-item">4x50 SF Relevo mixto (heats) </li>
+                                        Sesion 7:</li>
+                                    <li class="list-group-item">50 AP Mujeres (heats) </li>
+                                    <li class="list-group-item">50 AP Hombres (heats)</li>
+                                    <li class="list-group-item">800 SF Mujeres (slow heats) </li>
+                                    <li class="list-group-item">800 SF Hombres (slow heats)</li>
+                                    <li class="list-group-item">4x100 SF Mujeres (heats) </li>
+                                    <li class="list-group-item">4x100 SF Hombres (heats)</li>
                                 </ul>
                             </div>
                             <div class="modal-footer">
@@ -531,12 +541,11 @@
                 </div>
 
                 <!-- Modal -->
-                <div class="modal fade" id="miercolesta" tabindex="-1" aria- labelledby="miercolesta"
-                    aria-hidden="true">
+                <div class="modal fade" id="sabadota" tabindex="-1" aria- labelledby="sabadota" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title text-danger" id="miercolesta">Miercoles 19 tarde</h5>
+                                <h5 class="modal-title text-danger" id="sabadota">Sabado 23 tarde</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -545,21 +554,21 @@
                                     <li class="list-group-item active" aria-current="true">Calentamiento</li>
                                     <li class="list-group-item">3:15 - 4:45 </li>
                                     <li class="list-group-item active" aria-current="true">Inicio de Competencia 5:00
-                                        Sesion 2</li>
-                                    <li class="list-group-item">100 SF hombres Final (heats) ----- 100 BF Mujeres Final
+                                        Sesion 8</li>
+                                    <li class="list-group-item">50 AP Hombres Final (heats) ----- 50 AP Mujeres Final
                                         (heats)</li>
-                                    <li class="list-group-item">1ra Ceremonia Premios 100 SF Mujeres</li>
-                                    <li class="list-group-item">100 BF Mujeres Final (heats)</li>
-                                    <li class="list-group-item">2da Ceremonia Premios 100 SF Hombres</li>
-                                    <li class="list-group-item">100 BF Hombres Final (heats)</li>
-                                    <li class="list-group-item">3ra Ceremonia Premios 100 BF Mujeres</li>
-                                    <li class="list-group-item">400 BF Mujeres Final (heats)</li>
-                                    <li class="list-group-item">4ta Ceremonia Premios 100 BF Hombres</li>
-                                    <li class="list-group-item">400 SF Hombres Final (heats)</li>
-                                    <li class="list-group-item">5ta Ceremonia Premios 400 SF Mujeres</li>
-                                    <li class="list-group-item">4X50 SF Reñevo mixto Final (heats)</li>
-                                    <li class="list-group-item">6ta Ceremonia Premios 400 SF Hombres y 7ta Ceremonia
-                                        premios 4x50 SF Relevo mixto</li>
+                                    <li class="list-group-item">1ra Ceremonia Premios 50 AP Mujeres</li>
+                                    <li class="list-group-item">800 SF Mujeres (Fast heats)</li>
+                                    <li class="list-group-item">2da Ceremonia Premios 50 AP Hombres</li>
+                                    <li class="list-group-item">800 SF Hombres Final (Fast heats)</li>
+                                    <li class="list-group-item">3ra Ceremonia Premios 800 SF Mujeres</li>
+                                    <li class="list-group-item">4X100 SF Mujeres Final (heats)</li>
+                                    <li class="list-group-item">4ta Ceremonia Premios 800 SF Hombres</li>
+                                    <li class="list-group-item">4X100 SF Hombres Final (heats)</li>
+                                    <li class="list-group-item">5ta Ceremonia Premios 4X100 SF Mujeres Y 6ta Ceremonia
+                                        de premios 4x100 SF Hombres</li>
+                                    <li class="list-group-item active" aria-current="true">Ceremonia Final 8:00</li>
+
 
 
                                 </ul>

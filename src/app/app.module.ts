@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 import { DataTablesModule } from "angular-datatables";
 import { EventosComponent } from './eventos/eventos.component';
 import { SwimmingComponent } from './swimming/swimming.component';
+import { TerminosComponent } from './terminos/terminos.component';
+import { CarreraComponent } from './carrera/carrera.component';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { SwimmingComponent } from './swimming/swimming.component';
     AdminComponent,
     EventosComponent,
     SwimmingComponent,
+    TerminosComponent,
+    CarreraComponent,
 
   ],
   imports: [
