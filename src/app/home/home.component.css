@@ -1,0 +1,6 @@
+.fondo{
+
+    background-image: url('../../assets/Foto.png');    
+    background-attachment: fixed;
+    background-position: center;
+  }

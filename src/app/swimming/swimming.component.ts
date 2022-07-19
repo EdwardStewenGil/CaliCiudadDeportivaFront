@@ -14,7 +14,7 @@ export class SwimmingComponent implements OnInit {
   usuarioDto: UsuarioDto[] = [];
   nuevoUsuario: UsuarioDto = { nombre: '', identificacion: '', celular: '', correo: '', comuna: '', genero: '', evento: "swimming" };
 
-  terminos = "false"
+  terminos = ""
   constructor(
     private userServiceService: UserServiceService) { }
 
@@ -22,6 +22,8 @@ export class SwimmingComponent implements OnInit {
 
 
   public crearUsuario() {
+
+
 
     if (this.nuevoUsuario.nombre == "") {
       Swal.fire('nombre no diligenciado')
@@ -41,7 +43,7 @@ export class SwimmingComponent implements OnInit {
 
       Swal.fire('comuna no diligenciado')
 
-    } else if (this.terminos == "false") {
+    } else if (this.terminos == "") {
 
       Swal.fire('debes aceptar termino y condiciones')
 
@@ -57,13 +59,13 @@ export class SwimmingComponent implements OnInit {
           }
         }, (error) => {
           console.log(error);
+          Swal.fire('error al intentar registrate por favor intentalo mas tarde')
+
         }
       );
 
 
     }
-
-
 
 
 
