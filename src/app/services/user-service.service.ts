@@ -20,7 +20,7 @@ export class UserServiceService {
 
   public getAllUser(): Observable<any> {
     return this.httpClient.get<UsuarioDto[]>(
-      'http://localhost:3306/codesa/getAllUser',
+      'https://caliccd.herokuapp.com/codesa/getAllUser',
       this.respuesta,
 
     );
@@ -28,10 +28,10 @@ export class UserServiceService {
 
   public createUser(data: UsuarioDto): Observable<boolean> {
     return this.httpClient.post<any>(
-      'http://localhost:3306/codesa/createUser',
+      'https://caliccd.herokuapp.com/codesa/createUser',
       data,
       this.respuesta
-    );
+    );  
   }
 
 

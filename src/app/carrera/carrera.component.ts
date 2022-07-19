@@ -12,7 +12,7 @@ import Swal from 'sweetalert2'
 })
 export class CarreraComponent implements OnInit {
   usuarioDto: UsuarioDto[] = [];
-  nuevoUsuario: UsuarioDto = { nombre: '', identificacion: '', celular: '', correo: '', comuna: '', genero: '', evento: "swimming" };
+  nuevoUsuario: UsuarioDto = { nombre: '', identificacion: '', direccion: '', comuna: '', celular: '', correo: '', fecha_na: '', genero: '', institucion: '', evento: "carrera universitaria" };
 
   terminos = ""
   constructor(
@@ -27,9 +27,19 @@ export class CarreraComponent implements OnInit {
 
     if (this.nuevoUsuario.nombre == "") {
       Swal.fire('nombre no diligenciado')
-    } else if (this.nuevoUsuario.celular == "") {
+    }
+    else if (this.nuevoUsuario.identificacion == "") {
 
-      Swal.fire('Celular no diligenciado')
+      Swal.fire('Identificacion no diligenciado')
+
+    }
+    else if (this.nuevoUsuario.direccion == "") {
+
+      Swal.fire('Direccion no diligenciado')
+
+    } else if (this.nuevoUsuario.comuna == "") {
+
+      Swal.fire('Comuna no diligenciada')
 
     } else if (this.nuevoUsuario.celular?.length != 10) {
 
@@ -37,11 +47,19 @@ export class CarreraComponent implements OnInit {
 
     } else if (this.nuevoUsuario.correo == "") {
 
-      Swal.fire('correo no diligenciado')
+      Swal.fire('Correo no diligenciado')
 
-    } else if (this.nuevoUsuario.comuna == "") {
+    } else if (this.nuevoUsuario.fecha_na?.length != 10) {
 
-      Swal.fire('comuna no diligenciado')
+      Swal.fire('El formato de fecha es dd-mm-yyyy ejemplo 22-04-2000')
+
+    } else if (this.nuevoUsuario.genero == "") {
+
+      Swal.fire('Genero no diligenciado')
+
+    } else if (this.nuevoUsuario.institucion == "") {
+
+      Swal.fire('Institucion no diligenciado')
 
     } else if (this.terminos == "") {
 
