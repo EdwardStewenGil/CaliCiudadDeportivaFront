@@ -12,7 +12,7 @@ import Swal from 'sweetalert2'
 })
 export class SwimmingComponent implements OnInit {
   usuarioDto: UsuarioDto[] = [];
-  nuevoUsuario: UsuarioDto = { nombre: '', identificacion: '', celular: '', correo: '', comuna: '', genero: '', evento: "swimming" };
+  nuevoUsuario: UsuarioDto = { nombre: '', identificacion: '', direccion: '', comuna: '', celular: '', fecha_na:''  , genero: '', institucion: '', evento: "swimming" };
 
   terminos = "false"
   constructor(
